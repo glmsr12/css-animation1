@@ -1,0 +1,44 @@
+body {
+  margin: 200px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  flex-direction: center;
+}
+
+.parent {
+  background-color: blueviolet;
+  height: 400px;
+  width: 400px;
+}
+
+.child {
+  background-color: aliceblue;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  animation: myanimation 2s ease-in forwards infinite;
+}
+
+.parent:hover .child {
+  animation-play-state: paused;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: rgb(190, 226, 214);
+    transform: translateX(0);
+  }
+  33% {
+    background-color: rgb(132, 132, 236);
+    transform: translateY(100%);
+  }
+  66% {
+    background-color: rgb(91, 91, 219);
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    background-color: rgb(44, 34, 131);
+    transform: translateX(100%);
+  }
+}
